@@ -21,7 +21,9 @@ body {
     line-height: 1.2;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    color: rgb(var(--color-black)/.7)
+    color: rgb(var(--color-black)/.7);
+    max-inline-size: 1300px;
+    margin-inline: auto;
 }
 
 .black {
@@ -123,7 +125,7 @@ li a {
 
 #photo>img {
     inline-size: 80%;
-
+    max-inline-size: 300px;
 }
 
 .card {
@@ -137,15 +139,29 @@ li a {
 
 }
 
+.progress-container {
+
+    max-inline-size: 320px;
+}
+
 .bar {
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+
 }
+
+.bar>p {
+    width: 15%;
+    background-color: bisque;
+}
+
 
 
 meter {
     max-width: 60%;
-    width: 14rem;
+    width: 80%;
+
 
 }
 
@@ -184,10 +200,39 @@ meter {
     color: rgb(var(--color-blue))
 }
 
-li:hover{
-    background-color:  rgb(var(--color-blue));
-    color:white;
+li:hover {
+    background-color: rgb(var(--color-blue));
+    color: white;
 }
-li:hover a{
-    color:white
+
+li:hover a {
+    color: white;
+}
+
+
+@media screen and (max-width:600px) {}
+
+@media only screen and (min-width: 600px) {
+    #photo-article {
+        display: flex;
+    }
+
+    #section-two {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wd-40 {
+        width: 90%;
+    }
+
+    #section-four article {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    #section-three article div {
+        width:33%;
+    }
 }
